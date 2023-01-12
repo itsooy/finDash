@@ -1,27 +1,26 @@
-Hello there,
-The finDash is the Financial Dashboard Project of the Incubator13 program within the RRCRC. 
+# The finDash is the Financial Dashboard Project of the Incubator13 program within the RRCRC. 
 
-# Quasar App (quasar-firebase-app)
+# Financial Dashboard (quasar-finDash)
 
-A Quasar Framework app
+A Quasar Framework 
 
 ## Install the dependencies
-```bash
+```
 yarn
 ```
 
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
+```
 quasar dev
 ```
 
 ### Lint the files
-```bash
+```
 yarn run lint
 ```
 
 ### Build the app for production
-```bash
+```
 quasar build
 ```
 
