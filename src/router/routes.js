@@ -6,8 +6,8 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '/home', component: () => import('pages/Home.vue'), meta: {requiresAuth: true} },
-      { path: '/giris', component: () => import('components/girisSayfasi.vue') }
-
+      { path: '/giris', component: () => import('components/girisSayfasi.vue') },
+      { path: '/ManageUser', component: () => import('pages/ManageUser.vue'), meta: {requiresAuth: true}},
     ]
   },
 

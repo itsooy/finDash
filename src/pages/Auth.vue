@@ -35,6 +35,9 @@
             <AuthComponent :tab="tab"/>
           </q-tab-panel>
           </q-tab-panels>
+          <div class="text-center q-my-md">
+            Powered by &nbsp;&nbsp;&nbsp;<q-img src="../assets/charity13-horizantal_V3.png" style="max-width: 160px;"></q-img>
+          </div>
         </q-card>
       </q-page>
     </q-page-container>

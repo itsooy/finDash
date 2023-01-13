@@ -30,6 +30,7 @@
           dense
           icon="logout"
           @click="logout"
+          title="Log out"
         />
       </q-toolbar>
     </q-header>
@@ -64,6 +65,11 @@ import EssentialLink from 'components/EssentialLink.vue'
 import firebase from "firebase";
 
 const linksData = [
+  {
+    title: 'Manage Users',
+    icon: 'person',
+    link: '../ManageUser'
+  },
   {
     title: 'Docs',
     caption: 'quasar.dev',
