@@ -7,12 +7,12 @@
       <q-toolbar>
         <q-btn dense flat round icon="menu" @click="left = !left" />
 
-        <q-toolbar-title>
+        <q-toolbar-title class="">
           <q-img src="../assets/incubator13_logo_vertical-139x50.png" width="139px"/>
           Financial Dashboard
         </q-toolbar-title>
         
-        <q-card class="welcomeCard" style="background-color: brown; max-height: 70px;">
+        <q-card class="gt-sm" style="background-color: brown; max-height: 70px;">
           <q-card-section>
             <p class="q-mr-lg">Welcome, <br> {{ email }}</p>
           </q-card-section>
@@ -36,18 +36,37 @@
     </q-header>
 
     <q-drawer v-model="left" side="left" overlay elevated>
-      <q-list>
-        <q-item-label
-          header
-          class="text-grey-8"
+      <q-list padding>
+        <q-item
+          to="/home"
+          active-class="tab-active"
+          exact
+          class="q-ma-sm navigation-item"
+          clickable
+          v-ripple
         >
-          Essential Links
-        </q-item-label>
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
+          <q-item-section avatar>
+            <q-icon name="dashboard" />
+          </q-item-section>
+          <q-item-section>
+            Home
+          </q-item-section>
+        </q-item>
+        <q-item
+          to="/manageuser"
+          active-class="tab-active"
+          exact
+          class="q-ma-sm navigation-item"
+          clickable
+          v-ripple
+        >
+            <q-item-section avatar>
+            <q-icon name="person" />
+          </q-item-section>
+            <q-item-section>
+              <q-item-label>Manage Users</q-item-label>
+            </q-item-section>
+        </q-item>                        
       </q-list>
     </q-drawer>
 
@@ -60,7 +79,7 @@
 </template>
 
 <script>
-import EssentialLink from 'components/EssentialLink.vue'
+
 
 import firebase from "firebase";
 
@@ -69,68 +88,26 @@ const linksData = [
     title: 'Manage Users',
     icon: 'person',
     link: '../ManageUser'
-  },
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
   }
 ]
 export default {
   name: 'MainLayout',
-  components: {
-    EssentialLink
-  },
+
   data () {
     return {
       left: false,
-      user: '',
+      username: '',
       email: '',
-      essentialLinks: linksData
+      emailVerified: false
     }
   },
   created() {
-    firebase.auth().onAuthStateChanged((auth) => {
-      if (auth) {
-        this.user = auth.displayName
-        this.email = auth.email
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.username = user.displayName
+        this.email = user.email
+        this.emailVerified = user.emailVerified
+        console.log(user)
       } else {
         console.log('user name is null')
       }
@@ -150,6 +127,13 @@ export default {
 </script>
 
 <style >
+.q-drawer {
+    background-color: beige;
+    /**
+    max-height: 50%;
+    */
+}
+
 .header_normal {
   background: linear-gradient(
     145deg,

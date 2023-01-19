@@ -2,7 +2,7 @@
   <q-page class="flex q-pa-md">
     
     <div>
-      <iframe title="global vision 1 - Page 1" width="1880" height="850" src="https://app.powerbi.com/view?r=eyJrIjoiNTFjODIwYzEtNTYxOS00OTcwLThjZDQtY2RkMDgzNjQzNzJhIiwidCI6IjA4ZjU4OTkzLWMzOTctNDE3ZC05YTk0LTIxNmU1N2E3NTQ2YyJ9" frameborder="0" allowFullScreen="true"></iframe>
+      <iframe title="Dashboard_CharITy13" width="1880" height="850" src="https://app.powerbi.com/reportEmbed?reportId=ba118b36-0cee-4701-bf64-6dc94abef85d&autoAuth=true&ctid=08f58993-c397-417d-9a94-216e57a7546c" frameborder="0" allowFullScreen="true"></iframe>
       <br/>
 <!--      
       Welcome Home {{ user }} <br> {{ email }}
