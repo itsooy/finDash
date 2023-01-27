@@ -17,23 +17,13 @@
             narrow-indicator
           >
             <q-tab name="login" label="Login" />
-            <!--
-            <q-tab name="register" label="Register" />
-            <q-tab name="passwordless" label="Passwordless" />
-            -->
+
           </q-tabs>
 
           <q-tab-panels v-model="tab" animated>
             <q-tab-panel name="login">
               <AuthComponent :tab="tab" />
             </q-tab-panel>
-
-            <q-tab-panel name="register">
-              <AuthComponent :tab="tab"/>
-            </q-tab-panel>
-          <q-tab-panel name="passwordless">
-            <AuthComponent :tab="tab"/>
-          </q-tab-panel>
           </q-tab-panels>
           <div class="text-center q-my-md">
             Powered by &nbsp;&nbsp;&nbsp;<q-img src="../assets/charity13-horizantal_V3.png" style="max-width: 160px;"></q-img>

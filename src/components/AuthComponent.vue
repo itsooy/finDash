@@ -66,21 +66,7 @@ export default {
     submitForm () {
       if (this.tab === 'login') {
         this.signInExistingUser(this.formData.email, this.formData.password)
-      } else if (this.tab === 'register'){
-        this.createUser(this.formData.email, this.formData.password)
-      } else {
-        this.passwordless(this.formData.email)
       }
-    },
-    google () {
-      const provider = new firebase.auth.GoogleAuthProvider()
-      firebase.auth().signInWithPopup(provider)
-      .then(result => {
-        console.log('result', result)
-        this.$q.notify({message: 'Sign In Success.'})
-        this.$router.push('/home')
-      })
-      .catch(error => console.log('error',error))
     },
     signInExistingUser (email, password) {
       console.log(email, password)
@@ -90,16 +76,6 @@ export default {
           this.$router.push('/home')
         })
         .catch(error => { console.log(error)})
-    },
-    createUser(email, password) {
-      console.log(email, password)
-      firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then(auth => {
-          this.$q.notify({message: 'Sign Up Success.'})
-          //this.$router.push('/home')
-        })
-        .catch(error => {console.log(error)
-        })
     },
     forgotPassword () {
       this.resetPwdDialog = true
