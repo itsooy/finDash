@@ -9,7 +9,7 @@
 
         <q-toolbar-title class="">
           <q-img src="../assets/incubator13_logo_vertical-139x50.png" width="139px"/>
-          Financial Dashboard
+          <span class="gt-xs"> Financial Dashboard</span>
         </q-toolbar-title>
         
         <q-card class="gt-sm" style="background-color: brown; max-height: 70px;">
@@ -52,6 +52,7 @@
             Home
           </q-item-section>
         </q-item>
+        <!--
         <q-item
           to="/manageuser"
           active-class="tab-active"
@@ -66,7 +67,8 @@
             <q-item-section>
               <q-item-label>Manage Users</q-item-label>
             </q-item-section>
-        </q-item>                        
+        </q-item>      
+      -->                  
       </q-list>
     </q-drawer>
 
