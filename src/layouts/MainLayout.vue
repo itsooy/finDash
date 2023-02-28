@@ -77,6 +77,13 @@
       <router-view />
     </q-page-container>
 
+    <q-footer reveal elevated class="bg-grey-8 text-white" style="height: 5.5%;">
+      <div class="q-mt-sm q-ml-md" style="font-size: x-large; text-align: center;">
+        <span>Powered by  </span>
+        <q-img src="../assets/charity13-white_horizontal-183x50px.png" style="max-width: 140px;"/>
+        <!--<q-btn icon="img:../assets/charity13-white_horizontal-183x50px.png" width="100px" href="https://www.charity13.ca/" />-->
+      </div>
+    </q-footer>
   </q-layout>
 </template>
 
