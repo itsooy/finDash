@@ -1,6 +1,8 @@
 <template>
   <q-page class="flex q-pa-md">
-
+      <div id="powerbi-report-md" class="xl" >
+        <iframe title="Dashboard_CharITy13" width="1800" height="836" frameborder="0" allowFullScreen="false" src="https://app.powerbi.com/view?r=eyJrIjoiYTBmOTM2NTYtYzA1MS00NWIyLWE5NmQtZGIzOTNlNjQ5ZTJiIiwidCI6IjA4ZjU4OTkzLWMzOTctNDE3ZC05YTk0LTIxNmU1N2E3NTQ2YyJ9&pageName=ReportSection"></iframe>
+      </div>
       <div id="powerbi-report-lg" class="lg">
         <!--<iframe title="Report Section" width="1400" height="836" src="https://app.powerbi.com/view?r=eyJrIjoiNDNhZDdjYzctYzA3OC00M2UxLWE4ZWEtNDhiZjNiZmVlOTZlIiwidCI6IjA4ZjU4OTkzLWMzOTctNDE3ZC05YTk0LTIxNmU1N2E3NTQ2YyJ9" frameborder="0" allowFullScreen="true"></iframe>-->
         <iframe title="Dashboard_CharITy13" width="1800" height="836" frameborder="0" allowFullScreen="false" src="https://app.powerbi.com/view?r=eyJrIjoiYTBmOTM2NTYtYzA1MS00NWIyLWE5NmQtZGIzOTNlNjQ5ZTJiIiwidCI6IjA4ZjU4OTkzLWMzOTctNDE3ZC05YTk0LTIxNmU1N2E3NTQ2YyJ9&pageName=ReportSection"></iframe>
